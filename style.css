@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body .navbar ul {
+  margin: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+  right: 10px;
+}
+
+body .navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+
+.logo {
+  height: 30px;
+}
+
+body .navbar ul li button {
+  background-color: black;
+  color: white;
+  font-size: large;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+body .navbar ul li i {
+  font-size: xx-large;
+}
+
+.themeimg {
+  background-image: url(./images/theme-1.jpg);
+  background-size: contain;
+  background-position: 330px 0px;
+  background-repeat: repeat-x;
+  height: 400px;
+  width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themeimg form div {
+  padding: 50px;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#searchbox {
+  height: 50px;
+  width: 500px;
+  border: none;
+}
+#searchbtn {
+  height: 52px;
+  width: 52px;
+  font-size: large;
+  font-weight: 500;
+  border: none;
+}
+
+.themeimg form div i {
+  position: relative;
+  right: 53px;
+  top: 9px;
+  font-size: xx-large;
+}
