@@ -1,3 +1,4 @@
+//shoes databse
 let shoes = [
     1 = {
         name: "adidas Yeezy Boost 350 V2 “Zebra”",
