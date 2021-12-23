@@ -7,21 +7,39 @@ html {
 * {
   font-family: "Montserrat", sans-serif;
 }
-
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .mobilehide {
+    display: none;
+  }
+}
+
+body .navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 body .navbar ul {
+  width: 100%;
   margin: 40px;
-  position: relative;
   display: flex;
   flex-direction: row;
   list-style: none;
   gap: 30px;
   align-items: center;
+  justify-content: center;
   right: 10px;
 }
 
@@ -29,6 +47,13 @@ body .navbar ul li a {
   text-decoration: none;
   color: black;
   font-size: large;
+}
+
+body .navbar ul li .category {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  background-color: white;
 }
 
 .logo {
@@ -54,7 +79,7 @@ body .navbar ul li i {
   background-position: 330px 0px;
   background-repeat: repeat-x;
   height: 400px;
-  width: 1920px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +98,13 @@ body .navbar ul li i {
   height: 50px;
   width: 500px;
   border: none;
+  font-size: large;
 }
+
+::placeholder {
+  font-size: large;
+}
+
 #searchbtn {
   height: 52px;
   width: 52px;
@@ -87,4 +118,37 @@ body .navbar ul li i {
   right: 53px;
   top: 9px;
   font-size: xx-large;
+}
+
+#catalog {
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.shoecard {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 400px;
+  width: 300px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.shoecard p {
+  text-align: center;
+  font-weight: 500;
+  font-size: large;
+}
+
+.shoecard h2 {
+  position: absolute;
+  text-align: center;
+  bottom: 25px;
+  left: 125px;
 }
