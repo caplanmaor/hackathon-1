@@ -19,37 +19,30 @@
             <img class="logo" src="./images/logo.png" alt="logo" />
           </a>
         </li>
-        <li>
-          <a href="#men">Men</a>
+        <li class="mobilehide">
+          <button class="category">Men</button>
         </li>
-        <li>
-          <a href="#women">Women</a>
+        <li class="mobilehide">
+          <button class="category">Women</button>
         </li>
-        <li>
-          <a href="#adidas">Adidas</a>
+        <li class="mobilehide">
+          <button class="category">Adidas</button>
         </li>
-        <li>
-          <a href="#yeezy">Yeezy</a>
+        <li class="mobilehide">
+          <button class="category">Yeezy</button>
         </li>
-        <li>
-          <a href="#nike">Nike</a>
+        <li class="mobilehide">
+          <button class="category">Nike</button>
         </li>
-        <li>
-          <a href="#jordan">Jordan</a>
+        <li class="mobilehide">
+          <button class="category">Jordan</button>
         </li>
-        <li>
-          <a href="#yeezy">Yeezy</a>
-        </li>
+
         <li><button>New Releases</button></li>
         <li><button>Retailers</button></li>
         <li>
           <a href="#user">
-            <i class="fas fa-user-alt"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#likes">
-            <i class="fas fa-heart"></i>
+            <i class="fas fa-shopping-cart"></i>
           </a>
         </li>
       </ul>
@@ -57,14 +50,26 @@
     <div class="themeimg">
       <form>
         <div>
-          <input id="searchbox" type="text" />
+          <input
+            id="searchbox"
+            class="searchbox-input"
+            type="text"
+            placeholder="Search for your favorite shoe!"
+          />
           <input id="searchbtn" type="submit" value="" />
           <i id="searchbtn-logo" class="fas fa-search"></i>
         </div>
       </form>
     </div>
-    <div class="catalog"></div>
-    <!-- code goes here -->
+    <div id="catalog"></div>
     <script src="script.js"></script>
+    <!-- vanilla tilt -->
+    <script src="vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelector(".shoecard"), {
+        max: 15,
+        speed: 400,
+      });
+    </script>
   </body>
 </html>
