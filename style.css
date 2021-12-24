@@ -76,7 +76,9 @@ body .navbar ul li button {
 }
 
 body .navbar ul li i {
+  position: relative;
   font-size: xx-large;
+  left: 8px;
 }
 
 .themeimg {
@@ -146,15 +148,19 @@ body .navbar ul li i {
   width: 300px;
   background-color: white;
   border-radius: 20px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
 }
 
 .shoecard p {
+  transform: translateZ(30px);
   text-align: center;
   font-weight: 500;
   font-size: large;
 }
 
 .shoecard h2 {
+  transform: translateZ(30px);
   position: relative;
   text-align: center;
   margin-top: auto;

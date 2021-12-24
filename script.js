@@ -1,3 +1,5 @@
+import { VanillaTilt } from "./vanilla-tilt.js";
+
 //shoes database
 let shoes = [
   {
@@ -31,14 +33,14 @@ let shoes = [
     img: "https://sneakerlinks.com/wp-content/uploads/2020/03/cinder-reflective2-600x375.jpg",
   },
   {
-    name: "adidas Yeezy Basketball “Quantum”",
+    name: "adidas Yeezy Boost 380 “Hylte Glow”",
     price: 250,
     category: ["Women", "Yeezy"],
-    img: "https://sneakerlinks.com/wp-content/uploads/2020/02/118321-600x542.jpg",
+    img: "https://sneakerlinks.com/wp-content/uploads/2020/12/yeezy380-copy-600x383.png",
   },
 ];
 
-catalog = document.getElementById("catalog");
+let catalog = document.getElementById("catalog");
 
 //set up men button
 document.getElementById("menbtn").addEventListener("click", function () {
@@ -76,6 +78,7 @@ function createShoes(filter) {
       //append card to catalog
       catalog.appendChild(shoeCard);
     }
+    VanillaTilt(document.querySelector(".shoecard"), {});
   }
 }
 createShoes();
