@@ -1,34 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   font-family: "Montserrat", sans-serif;
+  cursor: default;
 }
-html {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  scroll-behavior: smooth;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .mobilehide {
     display: none;
   }
 }
 
 body .navbar {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
+  right: 20px;
 }
 
 body .navbar ul {
@@ -58,6 +60,10 @@ body .navbar ul li .category {
 
 .logo {
   height: 30px;
+}
+
+.navbar ul li * {
+  cursor: pointer;
 }
 
 body .navbar ul li button {
@@ -122,19 +128,21 @@ body .navbar ul li i {
 
 #catalog {
   padding: 20px;
-  width: 90%;
+  width: 77%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 150px;
+  row-gap: 0px;
+  column-gap: 100px;
 }
 
 .shoecard {
   display: flex;
   flex-direction: column;
   align-content: center;
-  height: 400px;
+  justify-content: flex-start;
+  height: 420px;
   width: 300px;
   background-color: white;
   border-radius: 20px;
@@ -147,8 +155,8 @@ body .navbar ul li i {
 }
 
 .shoecard h2 {
-  position: absolute;
+  position: relative;
   text-align: center;
-  bottom: 25px;
-  left: 125px;
+  margin-top: auto;
+  bottom: 50px;
 }

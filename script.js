@@ -1,4 +1,4 @@
-//shoes databse
+//shoes database
 let shoes = [
   {
     name: "Air Jordan 10 Retro “Seattle”",
@@ -40,28 +40,42 @@ let shoes = [
 
 catalog = document.getElementById("catalog");
 
-function createShoes() {
+//set up men button
+document.getElementById("menbtn").addEventListener("click", function () {
+  createShoes("Men");
+});
+
+function createShoes(filter) {
+  //clear previous dom elements
+  let previousShoes = document.querySelectorAll(".shoecard");
+  for (let previousShoe of previousShoes) {
+    previousShoe.setAttribute("style", "display: none;");
+  }
+
+  //go over database and create shoes
   for (let shoe of shoes) {
-    //create shoe card
-    let shoeCard = document.createElement("div");
-    shoeCard.classList.add("shoecard");
-    //create shoe name
-    let shoeName = document.createElement("p");
-    shoeName.innerText = shoe.name;
-    shoeCard.setAttribute("data-tilt", "");
-    shoeCard.setAttribute("data-tilt-reverse", true);
-    shoeCard.appendChild(shoeName);
-    //create shoe image
-    let shoeImg = document.createElement("img");
-    shoeImg.src = shoe.img;
-    shoeCard.appendChild(shoeImg);
-    //create price
-    let shoePrice = document.createElement("h2");
-    shoePrice.innerText = shoe.price + "$";
-    shoeCard.appendChild(shoePrice);
-    //append card to catalog
-    catalog.appendChild(shoeCard);
+    //filter by category
+    if (shoe.category[0] == filter || filter == undefined) {
+      //create shoe cards
+      let shoeCard = document.createElement("div");
+      shoeCard.classList.add("shoecard");
+      shoeCard.setAttribute("data-tilt", "");
+      shoeCard.setAttribute("data-tilt-reverse", true);
+      //create shoe name
+      let shoeName = document.createElement("p");
+      shoeName.innerText = shoe.name;
+      shoeCard.appendChild(shoeName);
+      //create shoe image
+      let shoeImg = document.createElement("img");
+      shoeImg.src = shoe.img;
+      shoeCard.appendChild(shoeImg);
+      //create price
+      let shoePrice = document.createElement("h2");
+      shoePrice.innerText = shoe.price + "$";
+      shoeCard.appendChild(shoePrice);
+      //append card to catalog
+      catalog.appendChild(shoeCard);
+    }
   }
 }
-
 createShoes();
