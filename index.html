@@ -15,12 +15,10 @@
     <div class="navbar">
       <ul>
         <li>
-          <a href="#home">
-            <img class="logo" src="./images/logo.png" alt="logo" />
-          </a>
+          <img class="logo" src="./images/logo.png" alt="logo" />
         </li>
         <li class="mobilehide">
-          <button class="category">Men</button>
+          <button id="menbtn" class="category">Men</button>
         </li>
         <li class="mobilehide">
           <button class="category">Women</button>
@@ -41,9 +39,7 @@
         <li><button>New Releases</button></li>
         <li><button>Retailers</button></li>
         <li>
-          <a href="#user">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
+          <i class="fas fa-shopping-cart"></i>
         </li>
       </ul>
     </div>
@@ -64,8 +60,7 @@
     <div id="catalog"></div>
     <script src="script.js"></script>
     <!-- vanilla tilt -->
-    <script src="vanilla-tilt.js"></script>
-    <script>
+    <script src="vanilla-tilt.js">
       VanillaTilt.init(document.querySelector(".shoecard"), {
         max: 15,
         speed: 400,
