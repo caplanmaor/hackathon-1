@@ -42,22 +42,60 @@ let shoes = [
 
 let catalog = document.getElementById("catalog");
 
+//set up logo  button
+document.getElementById("logo").addEventListener("click", function () {
+  createShoes();
+});
+
 //set up men button
 document.getElementById("menbtn").addEventListener("click", function () {
   createShoes("Men");
 });
 
-function createShoes(filter) {
+//set up wommen button
+document.getElementById("womenbtn").addEventListener("click", function () {
+  createShoes("Women");
+});
+
+//set up adidas button
+document.getElementById("adidasbtn").addEventListener("click", function () {
+  createShoes("Adidas");
+});
+
+//set up yeezy button
+document.getElementById("yeezybtn").addEventListener("click", function () {
+  createShoes("Yeezy");
+});
+
+//set up nike button
+document.getElementById("nikebtn").addEventListener("click", function () {
+  createShoes("Nike");
+});
+
+//set up jordan button
+document.getElementById("jordanbtn").addEventListener("click", function () {
+  createShoes("Jordan");
+});
+
+function clearCatalog() {
   //clear previous dom elements
   let previousShoes = document.querySelectorAll(".shoecard");
   for (let previousShoe of previousShoes) {
     previousShoe.setAttribute("style", "display: none;");
   }
+}
+
+function createShoes(filter) {
+  clearCatalog();
 
   //go over database and create shoes
   for (let shoe of shoes) {
     //filter by category
-    if (shoe.category[0] == filter || filter == undefined) {
+    if (
+      shoe.category[0] == filter ||
+      shoe.category[1] == filter ||
+      filter == undefined
+    ) {
       //create shoe cards
       let shoeCard = document.createElement("div");
       shoeCard.classList.add("shoecard");
