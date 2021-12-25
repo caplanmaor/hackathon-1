@@ -194,3 +194,47 @@ body .navbar ul li i {
   margin-top: auto;
   bottom: 50px;
 }
+
+#retailcatalog {
+  width: 80%;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 35px;
+}
+
+.retailshop {
+  height: 304px;
+  width: 304px;
+}
+
+.retailimg {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  border: black solid 2px;
+}
+
+.retailshop-hover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 304px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0%;
+  transition: all 300ms ease-in-out;
+}
+
+.retailshop-hover:hover {
+  opacity: 50%;
+}
+
+#retailbtn:hover {
+  transition: all 0.25s ease-in-out;
+  background-color: #3daad9;
+}
