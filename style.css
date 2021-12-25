@@ -131,6 +131,11 @@ body .navbar ul li i {
   font-size: large;
   font-weight: 500;
   border: none;
+  cursor: pointer;
+}
+
+#searchbtn-logo {
+  pointer-events: none;
 }
 
 .themeimg form div i {
