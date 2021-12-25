@@ -180,7 +180,22 @@ body .navbar ul li i {
   transform: perspective(1000px);
 }
 
+.shoecart {
+  position: absolute;
+  align-self: center;
+  bottom: 105px;
+  left: 188.5px;
+  font-size: xx-large;
+  transform: translateZ(15px);
+}
+
+.shoecard:hover .shoecart {
+  color: lightgreen;
+}
+
 .shoecard p {
+  position: relative;
+  top: 45px;
   transform: translateZ(30px);
   text-align: center;
   font-weight: 500;
@@ -193,6 +208,10 @@ body .navbar ul li i {
   text-align: center;
   margin-top: auto;
   bottom: 50px;
+}
+
+.shoecard * {
+  pointer-events: none;
 }
 
 #retailcatalog {
