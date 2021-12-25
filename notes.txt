@@ -1,1 +1,2 @@
 add footer
+fix add to cart v bug
