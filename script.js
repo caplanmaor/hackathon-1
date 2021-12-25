@@ -1,5 +1,6 @@
 import { VanillaTilt } from "./vanilla-tilt.js";
 
+let cart = [];
 //shoes database
 let shoes = [
   {
@@ -41,10 +42,21 @@ let shoes = [
 ];
 
 createShoes();
+
 categoriesEventSetup();
 retailEventSetup();
 categoriesScaleAnimation();
 search();
+
+function shoeEventSetup() {
+  let shoeCards = document.getElementsByClassName("shoecard");
+  for (let shoe of shoeCards) {
+    shoe.addEventListener("click", function (e) {
+      e.target.children[2].classList.remove("fa-cart-plus");
+      e.target.children[2].classList.add("fa-check");
+    });
+  }
+}
 
 function retailEventSetup() {
   document.getElementById("retailbtn").addEventListener("click", function () {
@@ -134,6 +146,11 @@ function catalogFadeOut() {
   catalog.classList.remove("reverse");
 }
 
+function createCart() {
+  hideRetail();
+  clearCatalog();
+}
+
 function createShoes(filter) {
   hideRetail();
   catalogFadeOut();
@@ -160,6 +177,12 @@ function createShoes(filter) {
         let shoeImg = document.createElement("img");
         shoeImg.src = shoe.img;
         shoeCard.appendChild(shoeImg);
+        //create shoe cart
+        let shoeCart = document.createElement("i");
+        shoeCart.classList.add("shoecart");
+        shoeCart.classList.add("fas");
+        shoeCart.classList.add("fa-cart-plus");
+        shoeCard.appendChild(shoeCart);
         //create price
         let shoePrice = document.createElement("h2");
         shoePrice.innerText = shoe.price + "$";
@@ -170,5 +193,6 @@ function createShoes(filter) {
       VanillaTilt(document.querySelector(".shoecard"), {});
     }
     catalog.classList.add("reverse");
+    shoeEventSetup();
   });
 }
