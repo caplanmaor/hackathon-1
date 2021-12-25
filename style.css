@@ -148,7 +148,17 @@ body .navbar ul li i {
   justify-content: center;
   align-items: center;
   row-gap: 0px;
-  column-gap: 100px;
+}
+
+#catalog.fadeout {
+  transform: translateY(-5);
+  transition: all 300ms ease-in-out;
+  opacity: 0%;
+}
+#catalog.fadeout.reverse {
+  transform: translateY(0);
+  transition: all 300ms ease-in-out;
+  opacity: 100%;
 }
 
 .shoecard {
@@ -158,8 +168,9 @@ body .navbar ul li i {
   justify-content: flex-start;
   height: 420px;
   width: 300px;
+  padding-left: 60px;
+  padding-right: 60px;
   background-color: white;
-  border-radius: 20px;
   transform-style: preserve-3d;
   transform: perspective(1000px);
 }
