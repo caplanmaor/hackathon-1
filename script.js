@@ -43,6 +43,25 @@ let shoes = [
 createShoes();
 categoriesScaleAnimation();
 categoriesEventSetup();
+search();
+
+function search() {
+  document.getElementById("searchbtn").addEventListener("click", function (e) {
+    e.preventDefault();
+    let input = document.getElementById("searchbox");
+    let searchFilter = input.value.toUpperCase();
+    let searchShoes = document.getElementsByClassName("shoecard");
+    for (let shoe of searchShoes) {
+      let shoeName = shoe.firstChild;
+      let shoeNameText = shoeName.textContent;
+      if (shoeNameText.toUpperCase().indexOf(searchFilter) > -1) {
+        shoe.style.display = "flex";
+      } else {
+        shoe.style.display = "none";
+      }
+    }
+  });
+}
 
 function categoriesScaleAnimation() {
   let navCategories = document.getElementsByClassName("category");
