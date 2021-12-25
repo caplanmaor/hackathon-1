@@ -40,38 +40,42 @@ let shoes = [
   },
 ];
 
-let catalog = document.getElementById("catalog");
+//scale animation on hover for categories
+let navCategories = document.getElementsByClassName("category");
+for (let navCategory of navCategories) {
+  navCategory.addEventListener("mouseover", function () {
+    navCategory.classList.add("transition");
+    navCategory.classList.remove("reverse");
+  });
+  navCategory.addEventListener("mouseout", function () {
+    navCategory.classList.add("reverse");
+  });
+}
 
 //set up logo  button
 document.getElementById("logo").addEventListener("click", function () {
   createShoes();
 });
-
 //set up men button
 document.getElementById("menbtn").addEventListener("click", function () {
   createShoes("Men");
 });
-
 //set up wommen button
 document.getElementById("womenbtn").addEventListener("click", function () {
   createShoes("Women");
 });
-
 //set up adidas button
 document.getElementById("adidasbtn").addEventListener("click", function () {
   createShoes("Adidas");
 });
-
 //set up yeezy button
 document.getElementById("yeezybtn").addEventListener("click", function () {
   createShoes("Yeezy");
 });
-
 //set up nike button
 document.getElementById("nikebtn").addEventListener("click", function () {
   createShoes("Nike");
 });
-
 //set up jordan button
 document.getElementById("jordanbtn").addEventListener("click", function () {
   createShoes("Jordan");
