@@ -6,37 +6,37 @@ let shoes = [
     name: "Air Jordan 10 Retro “Seattle”",
     price: 190,
     category: ["Men", "Jordan"],
-    img: "https://sneakerlinks.com/wp-content/uploads/2019/10/air-jordan-10-city-series-court-green-release-date-600x448.jpg",
+    img: "./images/air-jordan.jpg",
   },
   {
     name: "SpongeBob x Nike Kyrie 5 “Pineapple House”",
     price: 160,
     category: ["Men", "Nike"],
-    img: "https://sneakerlinks.com/wp-content/uploads/2019/10/SpongeBob-Nike-Kyrie-5-Pineapple-House-CJ6951-800-Release-Date-e1570761513130-600x394.jpg",
+    img: "./images/SpongeBob-Nike.jpg",
   },
   {
     name: "Nora Vasconcellos x adidas 3MC “Light Purple”",
     price: 65,
     category: ["Women", "Adidas"],
-    img: "https://sneakerlinks.com/wp-content/uploads/2019/10/EF2398_06_standard-1-1-600x399.jpg",
+    img: "./images/standard-pink.jpg",
   },
   {
     name: "Olivia Kim x Nike Air Footscape “No Cover”",
     price: 150,
     category: ["Women", "Nike"],
-    img: "https://sneakerlinks.com/wp-content/uploads/2019/11/CK3321_100_A_PREM-600x458.jpg",
+    img: "./images/PREM-zebra.jpg",
   },
   {
     name: "adidas Yeezy Boost 350 V2 “Cinder Reflective”",
     price: 220,
     category: ["Men", "Yeezy"],
-    img: "https://sneakerlinks.com/wp-content/uploads/2020/03/cinder-reflective2-600x375.jpg",
+    img: "./images/cinder-reflective.jpg",
   },
   {
     name: "adidas Yeezy Boost 380 “Hylte Glow”",
     price: 250,
     category: ["Women", "Yeezy"],
-    img: "https://sneakerlinks.com/wp-content/uploads/2020/12/yeezy380-copy-600x383.png",
+    img: "./images/yeezy-copy.png",
   },
 ];
 
